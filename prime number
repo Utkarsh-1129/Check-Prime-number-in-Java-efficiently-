@@ -1,0 +1,24 @@
+Problem Statement: to check whether the number is prime or not in efficient way.
+Programming Language Used : Java
+
+Solution:
+
+import java.util.*;
+public class primeNUM {
+    public static boolean prime(int n){
+        boolean is_prime=true;
+        for (int i=2;i<=Math.sqrt(n) ; i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number to Check wheter it's a Prime or not :-");
+        int num=sc.nextInt();
+
+        System.out.println(prime(num));
+    }
+}
