@@ -1,0 +1,34 @@
+Problem Statement: Create a function in calculate the Binomial Coeficient (nCr).
+Programming Language Used : Java.
+
+Solution:
+//We just have to calulate nCr : binomial coefficient
+
+import java.util.*;
+public class binomalCoeff {
+    public static int Facto(int num){
+        int facto=1;
+        if(num==0||num==1){
+            return facto;
+        }
+        else{
+            for(int i=1;i<=num;i++) {
+                facto = facto * num;
+            }
+            return facto;
+        }
+    }
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int r=sc.nextInt();
+        int fac_n = Facto(n);
+        int fac_r = Facto(r);
+
+        int fac_n_r =Facto(n-r);
+        int nCr=(fac_n)/(fac_r*fac_n_r);
+        System.out.println(nCr);
+
+
+    }
+}
